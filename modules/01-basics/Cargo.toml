@@ -1,0 +1,5 @@
+[package]
+name = "m01-basics"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true

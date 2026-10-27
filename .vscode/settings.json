@@ -1,0 +1,27 @@
+{
+  // Run clippy (the linter) on every save, not just `cargo check`.
+  "rust-analyzer.check.command": "clippy",
+
+  // Inlay hints: show what the compiler infers. Great for learning!
+  "rust-analyzer.inlayHints.typeHints.enable": true,
+  "rust-analyzer.inlayHints.parameterHints.enable": true,
+  "rust-analyzer.inlayHints.chainingHints.enable": true,
+  "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "always",
+  // Shows whether a closure captures by ref, by mut ref, or by move (Module 05)
+  "rust-analyzer.inlayHints.closureCaptureHints.enable": true,
+  // Shows the lifetimes the compiler fills in for you (Module 07)
+  "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "skip_trivial",
+  // Shows `ref` / `&` binding modes inside patterns (Module 03)
+  "rust-analyzer.inlayHints.bindingModeHints.enable": true,
+
+  // "Run Test | Debug" buttons above every #[test]
+  "rust-analyzer.lens.enable": true,
+
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true
+  },
+  "files.exclude": {
+    "**/target": true
+  }
+}

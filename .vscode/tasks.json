@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Rust: test current module",
+      "detail": "cargo test in the package of the open file",
+      "type": "shell",
+      "command": "cargo test",
+      "options": { "cwd": "${fileDirname}" },
+      "problemMatcher": ["$rustc"],
+      "group": { "kind": "test", "isDefault": true }
+    },
+    {
+      "label": "Rust: clippy current module",
+      "type": "shell",
+      "command": "cargo clippy --all-targets",
+      "options": { "cwd": "${fileDirname}" },
+      "problemMatcher": ["$rustc"]
+    },
+    {
+      "label": "Rust: progress dashboard",
+      "type": "shell",
+      "command": "cargo run -q -p progress",
+      "problemMatcher": []
+    },
+    {
+      "label": "Rust: run playground",
+      "type": "shell",
+      "command": "cargo run -p playground",
+      "problemMatcher": ["$rustc"],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "Rust: watch tests (needs `cargo install bacon`)",
+      "type": "shell",
+      "command": "bacon test",
+      "options": { "cwd": "${fileDirname}" },
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}

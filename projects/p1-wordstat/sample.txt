@@ -1,0 +1,4 @@
+Rust is fast. Rust is safe!
+The borrow checker is your friend, not your enemy.
+
+Ownership, borrowing, lifetimes: learn them once, use them forever.

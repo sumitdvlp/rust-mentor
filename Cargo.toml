@@ -1,0 +1,17 @@
+[workspace]
+resolver = "3"
+members = [
+    "playground",
+    "modules/01-basics",
+    "modules/02-ownership",
+    "modules/03-structs-enums",
+    "modules/04-error-handling",
+    "modules/05-collections-iterators",
+    "projects/p1-wordstat",
+    "tools/progress",
+]
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+publish = false
